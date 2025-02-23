@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2beb6d2-3d09-4309-abad-6351ed3561e9" name="Changes" comment="index.html changed">
+    <list default="true" id="d2beb6d2-3d09-4309-abad-6351ed3561e9" name="Changes" comment="adding meta tag author">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ready Assemblies.html" beforeDir="false" afterPath="$PROJECT_DIR$/AssemblyGuide.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +56,8 @@
       <option name="presentableId" value="Default" />
       <updated>1739632405727</updated>
       <workItem from="1739632406731" duration="1445000" />
-      <workItem from="1739888554803" duration="651000" />
+      <workItem from="1739888554803" duration="1680000" />
+      <workItem from="1740319743756" duration="47000" />
     </task>
     <task id="LOCAL-00001" summary="index.html changed">
       <option name="closed" value="true" />
@@ -75,7 +75,31 @@
       <option name="project" value="LOCAL" />
       <updated>1739888958897</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="minor changes">
+      <option name="closed" value="true" />
+      <created>1739889231058</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1739889231058</updated>
+    </task>
+    <task id="LOCAL-00004" summary="minor changes_1">
+      <option name="closed" value="true" />
+      <created>1739890098381</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1739890098381</updated>
+    </task>
+    <task id="LOCAL-00005" summary="adding meta tag author">
+      <option name="closed" value="true" />
+      <created>1739890172859</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1739890172859</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -83,6 +107,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="index.html changed" />
-    <option name="LAST_COMMIT_MESSAGE" value="index.html changed" />
+    <MESSAGE value="minor changes" />
+    <MESSAGE value="minor changes_1" />
+    <MESSAGE value="adding meta tag author" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding meta tag author" />
   </component>
 </project>
