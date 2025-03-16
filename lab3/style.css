@@ -1,0 +1,94 @@
+body#mainBody {
+    background-color: #f0f0f0 !important;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1.headerStyle {
+    font-size: 36px !important;
+    color: darkblue !important;
+    font-style: normal !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+}
+
+h2.headerStyle {
+    font-size: 32px !important;
+    color: darkgreen !important;
+    font-style: italic !important;
+    line-height: 1.3 !important;
+    text-align: center !important;
+}
+
+h3.headerStyle {
+    font-size: 28px !important;
+    color: darkred !important;
+    font-style: normal !important;
+    line-height: 1.3 !important;
+    text-align: left !important;
+}
+
+#uniqueHeader {
+    font-size: 34px !important;
+    color: purple !important;
+    font-style: oblique !important;
+    line-height: 1.25 !important;
+    text-align: center !important;
+}
+
+a, a:link, a:visited, a:hover, a:active {
+    color: #007bff !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+}
+
+p {
+    font-size: 18px !important;
+    line-height: 1.6 !important;
+    text-align: justify !important;
+    color: #333333 !important;
+}
+
+ul, ol, dl {
+    margin: 20px !important;
+    padding: 10px !important;
+    font-size: 18px !important;
+    color: #555555 !important;
+}
+
+ul {
+    list-style-type: disc !important;
+}
+
+ol {
+    list-style-type: decimal !important;
+}
+
+table {
+    width: 90% !important;
+    margin: 20px auto !important;
+    border-collapse: collapse !important;
+    background-color: #ffffff !important;
+    font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+}
+
+table, th, td {
+    border: 2px solid #444444 !important;
+}
+
+th, td {
+    padding: 10px !important;
+    text-align: center !important;
+}
+
+th {
+    background-color: #007bff !important;
+    color: #ffffff !important;
+    font-size: 20px !important;
+}
+
+td {
+    font-size: 16px !important;
+    color: #333333 !important;
+}
