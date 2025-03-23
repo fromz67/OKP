@@ -1,5 +1,5 @@
-#mainBody {
-    background-color: #f0f0f0 !important;
+body#mainBody {
+    background-color: #f0f0f0;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -37,14 +37,10 @@ h3.headerStyle {
     text-align: center;
 }
 
-a, a:link, a:visited, a:active {
+a, a:link, a:visited, a:hover, a:active {
     color: #007bff;
     text-decoration: none;
     font-weight: bold;
-}
-
-a:hover {
-    color: darkred !important;
 }
 
 p {
@@ -95,4 +91,33 @@ th {
 td {
     font-size: 16px;
     color: #333333;
+}
+
+
+
+/* lab4 */
+
+header h1.headerStyle {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h1.headerStyle + p {
+    margin-top: 20px;
+    font-style: italic;
+}
+
+section ul > li,
+section ol > li {
+    color: #444;
+    padding-left: 5px;
+}
+
+p a + a {
+    margin-left: 15px;
+}
+
+body#mainBody section h2 {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
 }
