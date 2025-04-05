@@ -97,33 +97,27 @@ td {
 
 /* lab4 */
 
-/* Контекстний селектор */
 header h1.headerStyle {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
-/* Сусідній селектор */
+
 h1.headerStyle + p {
     margin-top: 20px;
     font-style: italic;
 }
 
-/* Дочірній селектор */
 section ul > li,
 section ol > li {
-    color: #6b2828;
+    color: #444;
     padding-left: 5px;
 }
 
-/* Сусідній селектор */
 p a + a {
     margin-left: 15px;
 }
-/* Контекстний селектор */
+
 body#mainBody section h2 {
     border-bottom: 2px solid #007bff;
     padding-bottom: 5px;
 }
-
-
-
