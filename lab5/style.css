@@ -126,53 +126,56 @@ body#mainBody section h2 {
 }
 
 
-/* lab5 /*
+/* lab5 */
 
-/* Обгортки для навігаційного меню та основного контенту */
-div.sidebar {
+.sidebar {
     width: 200px;
     float: left;
     background-color: #e0e0e0;
-    padding: 10px;
-    position: relative;
+    padding: 60px 10px 10px 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
 }
-
 div.content {
     margin-left: 220px;
     padding: 20px;
     position: relative;
 }
 
-/* Позиціонування для деяких блоків (наприклад, блоку таблиці) */
 div.comparison-block {
     position: relative;
     margin-top: 20px;
+    /*border: 2px dashed red;*/
 }
 
-/* Плаваючий блок для таблиці в Components (float застосований) */
+
 div.table-container {
     position: relative;
     float: left;
     width: 100%;
+    /*border: 2px dashed green;*/
 }
 
-/* Використання псевдокласу :first-child для першого абзацу в основному контенті */
 div.content p:first-child {
     font-weight: bold;
 }
 
-/* Псевдоелементи :before та :after для блоку заголовка */
-.header-block:before {
-    content: "«";
-    font-size: 40px;
-    vertical-align: middle;
-    color: #007bff;
-    margin-right: 5px;
+/* псевдоелемент */
+.sidebar:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: rgba(0, 123, 255, 0.2);
+    z-index: 1;
 }
-.header-block:after {
-    content: "»";
-    font-size: 40px;
-    vertical-align: middle;
-    color: #007bff;
-    margin-left: 5px;
+
+/* Тут виправлена помилка шо псевдоелемент перекриває текст */
+.sidebar * {
+    position: relative;
+    z-index: 1;
 }
