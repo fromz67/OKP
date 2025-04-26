@@ -106,7 +106,6 @@ function runDialogs() {
     if (!dialogWithUser()) return;
     showDeveloperInfo('Tymchuk', 'Vladyslav');
     compareStrings('Телефон', 'ПК');
-    // Після успішних діалогів запускаємо інші скрипти
     temporaryBackgroundChange('rgba(0, 123, 255, 0.2)', 30000);
     dynamicText();
     demoDOM();
