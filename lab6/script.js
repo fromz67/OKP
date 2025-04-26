@@ -1,12 +1,8 @@
-// External script: script.js
-
-// Перевірка, чи це головна сторінка index.html
 function isIndexPage() {
     const p = window.location.pathname;
     return p.endsWith('index.html') || p === '/' || p === '';
 }
 
-// 1. Функція «Діалог з користувачем» з повторним запитом
 function dialogWithUser() {
     alert("Ласкаво просимо на сайт!");
     let name;
@@ -34,12 +30,10 @@ function dialogWithUser() {
     return true;
 }
 
-// 2. Вивід інформації про розробника
 function showDeveloperInfo(surname, firstname, position = "Розробник") {
     alert(`Розробник: ${surname} ${firstname}, Посада: ${position}`);
 }
 
-// 3. Порівняння двох рядків
 function compareStrings(str1, str2) {
     const result = str1.localeCompare(str2);
     if (result > 0) {
@@ -51,7 +45,6 @@ function compareStrings(str1, str2) {
     }
 }
 
-// 4. Зміна фону сторінки
 function temporaryBackgroundChange(color, durationMs) {
     const original = document.body.style.backgroundColor;
     document.body.style.backgroundColor = color;
@@ -60,12 +53,11 @@ function temporaryBackgroundChange(color, durationMs) {
     }, durationMs);
 }
 
-// 5. Перенаправлення через location
 function redirectTo(url) {
     location.href = url;
 }
 
-// 6. Динамічний текст у .sidebar
+// Динамічний текст у .sidebar
 function dynamicText() {
     const sidebar = document.querySelector('.sidebar');
     if (!sidebar) return;
@@ -77,7 +69,7 @@ function dynamicText() {
     sidebar.appendChild(newDiv);
 }
 
-// 7. Демонстрація getElementById та querySelectorAll
+// getElementById та querySelectorAll
 function demoDOM() {
     const header = document.getElementById('uniqueHeader');
     if (header) {
@@ -93,7 +85,7 @@ function demoDOM() {
     document.querySelectorAll('.sidebar a').forEach(a => a.style.fontStyle = 'italic');
 }
 
-// 8. Демонстрація createElement, append, prepend тощо
+// createElement, append, prepend тощо
 function demoDOMManipulation() {
     const mainPara = document.querySelector('.content > p');
     if (!mainPara) return;
@@ -110,7 +102,6 @@ function demoDOMManipulation() {
     setTimeout(() => newSection.remove(), 5000);
 }
 
-// 9. Запуск діалогів та подальших маніпуляцій за кнопкою
 function runDialogs() {
     if (!dialogWithUser()) return;
     showDeveloperInfo('Tymchuk', 'Vladyslav');
@@ -122,10 +113,7 @@ function runDialogs() {
     demoDOMManipulation();
 }
 
-// Повісити обробник на кнопку після готовності DOM
 document.addEventListener('DOMContentLoaded', () => {
     const btn = document.getElementById('startDialog');
     if (btn) btn.addEventListener('click', runDialogs);
 });
-
-// Видалити автоматичний load-handler, оскільки все викликається в runDialogs()
