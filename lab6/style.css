@@ -178,3 +178,38 @@ h1:after {
     content: " 🖥️";
 }
 
+/*lab6*/
+
+
+.sidebar a, .sidebar button {
+    display: block;
+    margin: 5px 0;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+a:hover, button:hover {
+    color: blue;
+}
+#banner {
+    background: #cfe;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+footer {
+    margin-top: 20px;
+    font-size: 0.9em;
+    text-align: center;
+    color: #555;
+}
+.table-container table {
+    border-collapse: collapse;
+    width: 100%;
+}
+.table-container th, .table-container td {
+    border: 1px solid #999;
+    padding: 5px;
+}
+
+
