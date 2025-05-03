@@ -5,6 +5,7 @@
     <meta name="author" content="Vladyslav Tymchuk">
     <title>Головна</title>
     <link rel="stylesheet" href="style.css">
+    <script src="js/script.js"></script>
     <style>
         body {
             background-size: cover;
@@ -28,7 +29,13 @@
     <div class="header-block">
         <h1 id="mainHeader" class="headerStyle"><span>Комп'ютерний гід</span></h1>
     </div>
-    <p id="introText">
+
+<!--    Обробник через HTML-атрибут-->
+<!--    function handleClick(event) {-->
+<!--    console.log('HTML-атрибут. Елемент:', event.currentTarget);-->
+<!--    }-->
+
+    <p id="introText" onclick="handleClick(event)">
         На цьому сайті ви знайдете список найпопулярніших комплектуючих до комп'ютера,
         історію комп'ютерів та інструкцію по правильному підбору комплектуючих під час
         самостійної збірки ПК!
@@ -96,37 +103,33 @@
 </div>
 
 <script>
-    const params = new URLSearchParams(window.location.search);
-    if (params.get('retry') === 'true') {
-        alert('Вам потрібно погодитися з умовами використання, повторіть спробу.');
-        history.replaceState(null, '', window.location.pathname);
+
+    // Через властивість
+    const intro = document.getElementById('introText');
+    intro.onclick = (e) => console.log('onclick handler on', e.currentTarget);
+
+    // Через addEventListener
+    intro.addEventListener('click', (e) => console.log('listener 1 on', e.currentTarget));
+    intro.addEventListener('click', (e) => console.log('listener 2 on', e.currentTarget));
+
+    // Об’єкт-обробник
+    const objHandler = {
+        handleEvent(e) {
+            console.log('Об’єкт-обробник працює на', e.currentTarget);
+        }
+    };
+    intro.addEventListener('click', objHandler);
+
+    // Додатковий обробник
+    function extraHandler(event) {
+        console.log('Додатковий обробник. Елемент:', event.currentTarget);
     }
-    document.addEventListener('DOMContentLoaded', () => {
-        alert(
-            'Інформація про розробника сторінки:\n' +
-            'Прізвище: Tymchuk\n' +
-            'Ім\'я: Vladyslav\n' +
-            'Посада: Розробник'
-        );
+    intro.addEventListener('click', extraHandler);
 
-        // Додати підказку після блоку
-        const compBlock = document.querySelector('.comparison-block');
-        const tip = document.createElement('div');
-        tip.id = 'tip';
-        tip.textContent = 'Порада: завжди перевіряйте сумісність процесора та материнської плати!';
-        compBlock.after(tip);
+    function handleClick(e) {
+        alert('Клік через HTML-атрибут на ' + e.currentTarget.id);
+    }
 
-        // Додати список корисних порад у сайдбар
-        const sidebar = document.querySelector('.sidebar');
-        const adviceList = document.createElement('ul');
-        ['Оновлюйте драйвери.', 'Слідкуйте за температурою.', 'Регулярно чистіть систему.']
-            .forEach(text => {
-                const li = document.createElement('li');
-                li.textContent = text;
-                adviceList.appendChild(li);
-            });
-        sidebar.appendChild(adviceList);
-    });
 </script>
 
 

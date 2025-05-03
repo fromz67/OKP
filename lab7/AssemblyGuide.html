@@ -9,6 +9,10 @@
 
 <div class="sidebar">
     <p><a href="index.html">Головна</a></p>
+
+    <button data-action="highlightAll">Підсвітити всі</button>
+    <button data-action="collapseList">Згорнути список</button>
+    <button data-action="resetList">Скинути</button>
 </div>
 
 <div class="content">
@@ -22,7 +26,7 @@
     <section>
         <h2 class="headerStyle"><span>1. Визначте ціль використання ПК</span></h2>
         <p>Перш ніж вибирати комплектуючі, визначте, для чого буде використовуватись комп’ютер:</p>
-        <ul>
+        <ul id="usageList">
             <li><strong>Офісний ПК</strong> – для роботи з документами, інтернету.</li>
             <li><strong>Ігровий ПК</strong> – для сучасних ігор на високих налаштуваннях.</li>
             <li><strong>Робоча станція</strong> – для відеомонтажу, 3D-моделювання.</li>
@@ -79,6 +83,44 @@ AMD Radeon RX 7900 XT
     <p>Якщо ви вперше збираєте ПК, перегляньте <strong>відеоуроки</strong> або зверніться до спеціалістів.</p>
     <hr>
 </div>
+
+<script>
+
+    const usageList = document.getElementById('usageList');
+    usageList.addEventListener('click', function(event) {
+
+        const li = event.target.closest('li');
+        if (!li) return;
+        li.classList.toggle('highlight');
+    });
+
+
+    const actions = {
+        highlightAll: () => {
+            document.querySelectorAll('#usageList li').forEach(li => {
+                li.classList.add('highlight');
+            });
+        },
+        collapseList: () => {
+            const ul = document.getElementById('usageList');
+            if (ul) ul.style.display = 'none';
+        },
+        resetList: () => {
+            const ul = document.getElementById('usageList');
+            if (ul) ul.style.display = '';
+            document.querySelectorAll('#usageList li').forEach(li => {
+                li.classList.remove('highlight');
+            });
+        }
+    };
+
+    document.querySelector('.sidebar').addEventListener('click', function(event) {
+        const action = event.target.dataset.action;
+        if (action && actions[action]) {
+            actions[action]();
+        }
+    });
+
+</script>
 </body>
-<script src="script.js"></script>
 </html>
