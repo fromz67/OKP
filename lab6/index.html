@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Vladyslav Tymchuk">
+    <title>Головна</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-size: cover;
+            background-attachment: fixed;
+            transition: background 0.5s;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body id="mainBody">
+
+<script>
+    document.write('<div id="banner"></div>');
+</script>
+
+<div class="sidebar">
+    <a href="AssemblyGuide.html">Гайд по збірці ПК</a>
+    <a href="Components.html">Популярні комплектуючі</a>
+    <a href="History.html">Історія комп'ютера</a>
+    <a id="googleLink" href="https://www.google.com" target="_blank">Перейти на Google</a>
+    <a href="registration.html">Реєстрація</a>
+    <button id="compareBtn">Порівняти слова</button>
+    <button id="removeSecretBtn">Приховати секрет</button>
+</div>
+
+<div class="content">
+    <div class="header-block">
+        <h1 id="mainHeader" class="headerStyle"><span>Комп'ютерний гід</span></h1>
+    </div>
+    <p id="introText">
+        На цьому сайті ви знайдете список найпопулярніших комплектуючих до комп'ютера,
+        історію комп'ютерів та інструкцію по правильному підбору комплектуючих під час
+        самостійної збірки ПК!
+    </p>
+    <p id="secret">Секретний чекпоінт: збірка ПК — це мистецтво!</p>
+
+    <div class="comparison-block">
+        <div class="header-block">
+            <h2 id="comparisonGPU" class="headerStyle"><span>Порівняння поколінь відеокарт</span></h2>
+        </div>
+        <div class="table-container">
+            <table>
+                <colgroup>
+                    <col span="1" style="background-color: #f2f2f2;">
+                    <col span="2" style="background-color: #e6ffe6;">
+                    <col span="2" style="background-color: #ffe6e6;">
+                </colgroup>
+                <tr>
+                    <th rowspan="2" style="text-align: center;">Покоління</th>
+                    <th colspan="2" style="text-align: center;">NVIDIA</th>
+                    <th colspan="2" style="text-align: center;">AMD</th>
+                </tr>
+                <tr>
+                    <th>Архітектура</th>
+                    <th>Топова модель</th>
+                    <th>Архітектура</th>
+                    <th>Топова модель</th>
+                </tr>
+                <tr>
+                    <td style="text-align: left;"><strong>RTX 4000 (2022-...)</strong></td>
+                    <td style="text-align: center;">Ada Lovelace</td>
+                    <td style="text-align: right;">RTX 4090</td>
+                    <td style="text-align: center;">RDNA 3</td>
+                    <td style="text-align: right;">RX 7900 XTX</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;"><strong>RTX 3000 (2020-2022)</strong></td>
+                    <td style="text-align: center;">Ampere</td>
+                    <td style="text-align: right;">RTX 3090 Ti</td>
+                    <td style="text-align: center;">RDNA 2</td>
+                    <td style="text-align: right;">RX 6950 XT</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;"><strong>RTX 2000 (2018-2020)</strong></td>
+                    <td style="text-align: center;">Turing</td>
+                    <td style="text-align: right;">RTX 2080 Ti</td>
+                    <td style="text-align: center;">RDNA 1</td>
+                    <td style="text-align: right;">RX 5700 XT</td>
+                </tr>
+                <tr>
+                    <td rowspan="2" style="text-align: left; vertical-align: middle;"><strong>GTX серія</strong></td>
+                    <td style="text-align: center;">Pascal</td>
+                    <td style="text-align: right;">GTX 1080 Ti</td>
+                    <td style="text-align: center;">Polaris</td>
+                    <td style="text-align: right;">RX 590</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">Maxwell</td>
+                    <td style="text-align: right;">GTX 980 Ti</td>
+                    <td style="text-align: center;">GCN</td>
+                    <td style="text-align: right;">R9 Fury X</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('retry') === 'true') {
+        alert('Вам потрібно погодитися з умовами використання, повторіть спробу.');
+        history.replaceState(null, '', window.location.pathname);
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+        alert(
+            'Інформація про розробника сторінки:\n' +
+            'Прізвище: Tymchuk\n' +
+            'Ім\'я: Vladyslav\n' +
+            'Посада: Розробник'
+        );
+
+        // Замінити Google посилання через outerHTML
+        const googleLink = document.getElementById('googleLink');
+        googleLink.outerHTML = `
+      <a href="https://www.intel.com" target="_blank" id="resourcesLink">
+        Огляд топових ресурсів
+      </a>
+    `;
+
+        // Додати підзаголовок перед основним контентом
+        const content = document.querySelector('.content');
+        const sectionsHeader = document.createElement('h3');
+        sectionsHeader.textContent = 'Секції сайту';
+        content.prepend(sectionsHeader);
+
+        // Додати підказку після блоку
+        const compBlock = document.querySelector('.comparison-block');
+        const tip = document.createElement('div');
+        tip.id = 'tip';
+        tip.textContent = 'Порада: завжди перевіряйте сумісність процесора та материнської плати!';
+        compBlock.after(tip);
+
+        // Додати список корисних порад у сайдбар
+        const sidebar = document.querySelector('.sidebar');
+        const adviceList = document.createElement('ul');
+        ['Оновлюйте драйвери.', 'Слідкуйте за температурою.', 'Регулярно чистіть систему.']
+            .forEach(text => {
+                const li = document.createElement('li');
+                li.textContent = text;
+                adviceList.appendChild(li);
+            });
+        sidebar.appendChild(adviceList);
+
+        // Приховати секрет
+        document.getElementById('removeSecretBtn').addEventListener('click', () => {
+            const secret = document.getElementById('secret');
+            if (secret) secret.remove();
+        });
+
+        // Порівняння слів
+        document.getElementById('compareBtn').addEventListener('click', () => {
+            let s1, s2;
+            do { s1 = prompt('Перше слово:'); } while (!s1 || !s1.trim());
+            do { s2 = prompt('Друге слово:'); } while (!s2 || !s2.trim());
+            s1 = s1.trim(); s2 = s2.trim();
+            if (s1.length > s2.length) {
+                alert(`Довше слово: "${s1}" (${s1.length})`);
+            } else if (s2.length > s1.length) {
+                alert(`Довше слово: "${s2}" (${s2.length})`);
+            } else {
+                alert(`Рівні за довжиною (${s1.length}): "${s1}" і "${s2}"`);
+            }
+        });
+
+        // Зміна фону на 30 секунд з подальшим редіректом
+        document.body.style.backgroundColor = '#bbc5ff';
+        setTimeout(() => {
+            window.location.href = 'Components.html';
+        }, 30000);
+    });
+</script>
+
+
+
+</body>
+</html>

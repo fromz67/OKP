@@ -1,0 +1,215 @@
+body#mainBody {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1.headerStyle {
+    font-size: 36px;
+    color: darkblue;
+    font-style: normal;
+    line-height: 1.2;
+    text-align: center;
+}
+
+h2.headerStyle {
+    font-size: 32px;
+    color: darkgreen;
+    font-style: italic;
+    line-height: 1.3;
+    text-align: center;
+}
+
+h3.headerStyle {
+    font-size: 28px;
+    color: darkred;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: left;
+}
+
+#uniqueHeader {
+    font-size: 34px;
+    color: purple;
+    font-style: oblique;
+    line-height: 1.25;
+    text-align: center;
+}
+
+a, a:link, a:visited, a:hover, a:active {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+    color: #333333;
+}
+
+ul, ol, dl {
+    margin: 20px;
+    padding: 10px;
+    font-size: 18px;
+    color: #555555;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+}
+
+table, th, td {
+    border: 2px solid #444444;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #007bff;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+td {
+    font-size: 16px;
+    color: #333333;
+}
+
+
+
+/* lab4 */
+
+/* Контекстний селектор */
+header h1.headerStyle {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+/* Сусідній селектор */
+h1.headerStyle + p {
+    margin-top: 20px;
+    font-style: italic;
+}
+
+/* Дочірній селектор */
+section ul > li,
+section ol > li {
+    color: #6b2828;
+    padding-left: 5px;
+}
+
+/* Сусідній селектор */
+p a + a {
+    margin-left: 15px;
+}
+/* Контекстний селектор */
+body#mainBody section h2 {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+}
+
+
+/* lab5 */
+
+.sidebar {
+    width: 200px;
+    background-color: #e0e0e0;
+    padding: 60px 10px 10px 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+}
+div.content {
+    margin-left: 220px;
+    padding: 20px;
+    position: relative;
+}
+
+div.comparison-block {
+    position: relative;
+    margin-top: 20px;
+    /*border: 2px dashed red;*/
+}
+
+
+div.table-container {
+    float: left;
+    width: 100%;
+    /*border: 2px dashed green;*/
+}
+
+/*15 рядок history.html*/
+div.content p:first-child {
+    font-weight: bold;
+}
+
+/* псевдоелемент */
+.sidebar:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: rgba(0, 123, 255, 0.2);
+    z-index: 1;
+}
+
+/* псевдоелемент */
+h1:after {
+    content: " 🖥️";
+}
+
+/*lab6*/
+
+
+.sidebar a, .sidebar button {
+    display: block;
+    margin: 5px 0;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+a:hover, button:hover {
+    color: blue;
+}
+#banner {
+    background: #cfe;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+footer {
+    margin-top: 20px;
+    font-size: 0.9em;
+    text-align: center;
+    color: #555;
+}
+.table-container table {
+    border-collapse: collapse;
+    width: 100%;
+}
+.table-container th, .table-container td {
+    border: 1px solid #999;
+    padding: 5px;
+}
+
+
