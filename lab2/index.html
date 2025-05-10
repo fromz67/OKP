@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Vladyslav Tymchuk">
+    <title>Головна</title>
+</head>
+<body link="blue" vlink="purple" alink="red">
+<h1><font color="blue">Вітаю!</font></h1>
+<p>
+    <font size="4" color="darkgreen">
+        На цьому сайті ви знайдете список найпопулярніших комплектуючих до комп'ютера,
+        історію комп'ютерів та інструкцію по правильному підбору комплектуючих під час
+        самостійної збірки ПК!
+    </font>
+</p>
+
+<p><a href="AssemblyGuide.html"><font color="red">Гайд по збірці ПК</font></a></p>
+<p><a href="Components.html"><font color="red">Популярні комплектуючі</font></a></p>
+<p><a href="History.html"><font color="red">Історія комп'ютера</font></a></p>
+
+<p><a href="#comparisonGPU"><font color="red">Порівняння відеокарт</font></a></p>
+
+<p><a href="AssemblyGuide.html#info"><font color="red">Основи підбору відеокарт для ПК</font></a></p>
+
+<p><a href="https://www.google.com" target="_blank"><font color="red">Перейти на Google</font></a></p>
+
+
+<div>
+    <a href="img/pc.png" target="_blank">
+        <img src="img/pc.png" width="250" height="150" alt="Зображення 1">
+    </a>
+
+    <img src="img/cpu.png" width="800" height="600" alt="Зображення 2">
+
+    <img src="img/gpu.png" width="400" height="300" alt="Зображення 3">
+</div>
+
+
+<h1 id="comparisonGPU"><font color="blue">Порівняння поколінь відеокарт</font></h1>
+
+<table border="1" cellspacing="5" cellpadding="10" width="100%">
+    <colgroup>
+        <col span="1" style="background-color: #f2f2f2;">
+        <col span="2" style="background-color: #e6ffe6;">
+        <col span="2" style="background-color: #ffe6e6;">
+    </colgroup>
+
+    <tr>
+        <th rowspan="2" style="text-align: center;">Покоління</th>
+        <th colspan="2" style="text-align: center;">NVIDIA</th>
+        <th colspan="2" style="text-align: center;">AMD</th>
+    </tr>
+    <tr>
+        <th>Архітектура</th>
+        <th>Топова модель</th>
+        <th>Архітектура</th>
+        <th>Топова модель</th>
+    </tr>
+
+    <tr>
+        <td style="text-align: left;"><strong>RTX 4000 (2022-...)</strong></td>
+        <td style="text-align: center;">Ada Lovelace</td>
+        <td style="text-align: right;">RTX 4090</td>
+        <td style="text-align: center;">RDNA 3</td>
+        <td style="text-align: right;">RX 7900 XTX</td>
+    </tr>
+    <tr>
+        <td style="text-align: left;"><strong>RTX 3000 (2020-2022)</strong></td>
+        <td style="text-align: center;">Ampere</td>
+        <td style="text-align: right;">RTX 3090 Ti</td>
+        <td style="text-align: center;">RDNA 2</td>
+        <td style="text-align: right;">RX 6950 XT</td>
+    </tr>
+    <tr>
+        <td style="text-align: left;"><strong>RTX 2000 (2018-2020)</strong></td>
+        <td style="text-align: center;">Turing</td>
+        <td style="text-align: right;">RTX 2080 Ti</td>
+        <td style="text-align: center;">RDNA 1</td>
+        <td style="text-align: right;">RX 5700 XT</td>
+    </tr>
+    <tr>
+        <td rowspan="2" style="text-align: left; vertical-align: middle;"><strong>GTX серія</strong></td>
+        <td style="text-align: center;">Pascal</td>
+        <td style="text-align: right;">GTX 1080 Ti</td>
+        <td style="text-align: center;">Polaris</td>
+        <td style="text-align: right;">RX 590</td>
+    </tr>
+    <tr>
+        <td style="text-align: center;">Maxwell</td>
+        <td style="text-align: right;">GTX 980 Ti</td>
+        <td style="text-align: center;">GCN</td>
+        <td style="text-align: right;">R9 Fury X</td>
+    </tr>
+</table>
+</body>
+<style>
+    body {
+        background-image: url('img/background.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+    }
+</style>
+</html>
