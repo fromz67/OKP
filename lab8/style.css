@@ -248,7 +248,7 @@ footer {
     cursor: pointer;
     transition: background 0.2s;
 }
-/* розташування подій за відсотками від ширини */
+
 .timeline-event:nth-child(1) { left: 0%; }
 .timeline-event:nth-child(2) { left: 33%; }
 .timeline-event:nth-child(3) { left: 66%; }
@@ -260,8 +260,8 @@ footer {
 
 .timeline-marker {
     position: absolute;
-    top: calc(50% - 8px);
-    left: 0%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     width: 16px;
     height: 16px;
     background: #0066cc;
